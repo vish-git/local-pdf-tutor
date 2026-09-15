@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import type { FormEvent } from 'react';
 import './styles.css';
+import TextToSpeech from './TextToSpeech';
 
 const API = 'http://localhost:8000';
 
@@ -428,6 +429,10 @@ export default function App() {
               {ans}
             </div>
 
+            <TextToSpeech
+               text={ans}
+                autoPlay={false}
+             />
 
             {sources.map((s, i) => (
 
